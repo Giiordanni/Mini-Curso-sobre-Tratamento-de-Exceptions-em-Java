@@ -6,7 +6,7 @@ public class Exemplo1Inicio {
 		
 		int numerador = 8;
 		int denominador = 0;
-		
+
 		System.out.println("Antes da exceção");
 		System.out.println("Resultado da divisão: " + (numerador / denominador));
 		System.out.println("Após o tratamento da exceção");
