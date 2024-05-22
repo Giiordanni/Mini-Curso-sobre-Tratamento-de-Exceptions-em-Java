@@ -1,4 +1,4 @@
-package exceptions;
+package aula_exceptios;
 
 import java.util.InputMismatchException;
 import java.util.Locale;
@@ -7,22 +7,36 @@ import java.util.Scanner;
 public class Exemplo8Finaly {
 
 	public static void main(String[] args) {
+		
+		
 		Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-		try {
-			// instrução
-		}catch(ArithmeticException excecao1) {
-			System.out.println("Erro ao dividir por zero");
-		}catch(ArrayIndexOutOfBoundsException e){
-			System.out.println("Posição do array inválida");
-		}finally {
-			// instrução de liberação de recursos
-			System.out.println("Acontece independetemente da exception\n");
-			scanner.close();
-		}
+		
+			try {
+				System.out.print("Insira o primeiro valor: ");
+				double numero1 = scanner.nextDouble();
+				System.out.print("Insira o segundi valor: ");
+				double numero2 =  scanner.nextDouble(); //  Isso não gera uma exceção de ArithmeticException, pois não é considerado um erro aritmético em Java, mas sim uma operação válida de ponto flutuante.
+				
+				if(numero2 == 0) {
+					throw new ArithmeticException(); 
+				}
+				
+				System.out.printf("%.2f\n", numero1/numero2);
+				
+			}catch(ArithmeticException excecao1) {
+				System.out.println("Erro ao dividir por zero");
+			}catch(ArrayIndexOutOfBoundsException e){
+				System.out.println("Posição do array inválida");
+			}catch(InputMismatchException e){
+				e.printStackTrace();
+				System.out.println("Etrada: " + e.getMessage());
+			}finally {
+				scanner.close();
+			}
 		
 		
 	}
-
+	
 
 }
 

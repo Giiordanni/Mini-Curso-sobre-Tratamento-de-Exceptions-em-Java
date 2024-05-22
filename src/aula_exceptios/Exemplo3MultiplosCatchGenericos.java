@@ -1,4 +1,4 @@
-package exceptions;
+package aula_exceptios;
 
 public class Exemplo3MultiplosCatchGenericos {
 

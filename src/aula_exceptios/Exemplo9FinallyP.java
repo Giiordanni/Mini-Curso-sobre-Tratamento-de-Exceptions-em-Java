@@ -1,8 +1,9 @@
-package exceptions;
+package aula_exceptios;
 
 public class Exemplo9FinallyP {
 	public static void main(String []args) {
 	
+		
 		
 		int[] numeros = {2, 4, 6, 8, 10, 16, 18};
 		int[] denominador = {1, 3, 0, 2, 0};
@@ -15,6 +16,8 @@ public class Exemplo9FinallyP {
 				System.exit(0);
 				
 			}catch(ArrayIndexOutOfBoundsException e) {
+				e.printStackTrace();
+				System.out.println(e.getMessage());
 				System.out.println("Posiçao do array inválida");
 				System.exit(0);
 				
@@ -23,6 +26,7 @@ public class Exemplo9FinallyP {
 				System.out.println();
 			}
 		}
+		// pegadinha: "System.exit(0)" encerra toda a execução do programa.
 		
 
 	}

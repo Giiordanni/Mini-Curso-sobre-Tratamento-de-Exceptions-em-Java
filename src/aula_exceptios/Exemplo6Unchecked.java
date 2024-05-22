@@ -1,4 +1,4 @@
-package exceptions;
+package aula_exceptios;
 
 public class Exemplo6Unchecked {
 
@@ -19,7 +19,7 @@ public class Exemplo6Unchecked {
 	static int divisao(int numerador, int denominador) {	
 		try {
 			return numerador / denominador;
-		}catch(IllegalArgumentException e) {
+		}catch(ArithmeticException e) {
 			System.out.println("Erro");
 		}
 		return 0;
@@ -27,7 +27,9 @@ public class Exemplo6Unchecked {
 	
 	
 	
-	/*if(denominador == 0) {
+	/*
+	 * Podde usar dessa forma tbm
+	 * if(denominador == 0) {
 			throw new ArithmeticException("Argumento inválido");
 		}
 		return numerador/denominador;*/

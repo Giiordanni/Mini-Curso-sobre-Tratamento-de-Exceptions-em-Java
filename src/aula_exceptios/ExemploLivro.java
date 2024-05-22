@@ -1,4 +1,4 @@
-package exceptions;
+package aula_exceptios;
 
 import java.util.InputMismatchException;
 import java.util.Locale;
